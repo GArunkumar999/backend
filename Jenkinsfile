@@ -29,9 +29,6 @@ pipeline{
             //         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
             //     }
             // }
-            when { 
-                environment name: 'DEPLOY_TO', value: 'production'
-            }
             steps{
                 script{
                     echo "This is deploy"
