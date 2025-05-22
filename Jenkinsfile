@@ -19,21 +19,7 @@ pipeline{
                 }
             }
         }
-        stage('parameterstest'){
-            steps{
-                script{
-                echo "Hello ${params.PERSON}"
 
-                echo "Biography: ${params.BIOGRAPHY}"
-
-                echo "Toggle: ${params.TOGGLE}"
-
-                echo "Choice: ${params.CHOICE}"
-
-                echo "Password: ${params.PASSWORD}"
-                }
-            }
-        }
         stage('deploy'){
             //     input {
             //     message "Should we continue?"
