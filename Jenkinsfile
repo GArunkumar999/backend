@@ -25,8 +25,15 @@ pipeline{
                 script{
                   sh """
                      npm install
-                     
+
                      """    
+                }
+            }
+        }
+        stage('Build image'){
+            steps{
+                script{
+                    docker build -t backend:1.0.0 .
                 }
             }
         }
