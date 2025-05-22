@@ -3,7 +3,7 @@ pipeline{
     environment{
         project="expense"
         component="backend"
-        DEPLOY_TO="production"
+        appVersion=''
     }
     options { 
         timeout(time: 30, unit: 'MINUTES')
