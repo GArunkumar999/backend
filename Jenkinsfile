@@ -6,7 +6,6 @@ pipeline{
         DEPLOY_TO="production"
     }
     options { 
-        retry(3)
         timeout(time: 30, unit: 'MINUTES')
         disableConcurrentBuilds()
         }
