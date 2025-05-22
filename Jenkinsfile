@@ -33,7 +33,7 @@ pipeline{
         stage('Build image'){
             steps{
                 script{
-                    docker build -t backend:1.0.0 .
+                   sh 'docker build -t backend:1.0.0 .'
                 }
             }
         }
