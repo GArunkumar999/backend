@@ -19,6 +19,11 @@ pipeline{
         booleanParam(name: 'deploy', defaultValue: false, description: 'Toggle this value')
     }
     stages{
+        stage('checkout'){
+            steps{
+                git branch: 'feature', url: 'https://github.com/GArunkumar999/backend.git'
+            }
+        }
         stage('read version'){
             steps{
                 script{
